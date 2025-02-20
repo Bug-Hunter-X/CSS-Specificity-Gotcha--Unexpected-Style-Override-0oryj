@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors:
+
+```css
+div p {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+```
+
+In this scenario, both selectors target the `<p>` element. However, the first selector (`div p`) is more specific because it targets a `<p>` element that is a direct child of a `<div>` element.  This leads to the blue color being applied instead of red, even though the second rule appears later.
+
+The problem becomes more difficult to debug when there are multiple nested elements and numerous CSS rules.  The developer may not immediately understand the reason for the unexpected behavior.
+
+This specificity issue can be a hidden bug, particularly in larger projects where multiple developers work on the CSS.
