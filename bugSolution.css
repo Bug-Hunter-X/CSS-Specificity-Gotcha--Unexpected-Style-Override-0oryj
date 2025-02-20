@@ -1,0 +1,13 @@
+The following CSS code demonstrates a solution to the specificity problem using the `!important` flag:
+
+```css
+div p {
+  color: blue;
+}
+
+p {
+  color: red !important;
+}
+```
+
+Using `!important` forces the `color: red` declaration to override the `color: blue` declaration, regardless of specificity.  However, overuse of `!important` is generally discouraged as it can make CSS harder to maintain and debug.  Refactoring the CSS to avoid specificity conflicts is always a better long-term solution.
